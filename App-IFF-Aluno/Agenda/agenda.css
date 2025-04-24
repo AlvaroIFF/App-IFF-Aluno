@@ -1,0 +1,88 @@
+/* Estilos Gerais */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+.agenda-container {
+  width: 90%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex; /* Torna o container flexível */
+  flex-direction: column; /* Elementos organizados verticalmente */
+  justify-content: center; /* Centraliza o conteúdo verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  margin: auto; /* Centraliza horizontalmente na página */
+  padding: 20px; /* Espaço interno */
+  box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+/* Cabeçalho */
+.agenda-header {
+  background-color: #6A1B9A; /* Roxo */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%; /* Garante alinhamento ao container */
+  border-radius: 10px 10px 0 0; /* Bordas arredondadas no topo */
+}
+
+/* Grid do calendário */
+/* Centraliza e organiza o grid do calendário */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 dias por linha */
+  gap: 10px; /* Espaço entre os dias */
+  width: 400%; /* Largura maior para o grid */
+  max-width: none; /* Remove restrição de largura */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  position: relative; /* Permite ajustes de posicionamento */
+  left: 50%; /* Move o grid para o centro da página */
+  transform: translateX(-50%); /* Corrige o alinhamento horizontal */
+}
+
+/* Estilo dos dias */
+.day {
+  width: 100%; /* Ajusta ao tamanho da coluna do grid */
+  height: 80px; /* Altura das células dos dias */
+  background-color: #f4f4f9; /* Fundo claro */
+  border-radius: 8px; /* Bordas arredondadas */
+  display: flex; /* Centraliza o conteúdo dentro da célula */
+  justify-content: center;
+  align-items: center;
+  font-size: 18px; /* Tamanho da fonte dos números */
+  font-weight: bold; /* Destaca os números */
+  color: #333; /* Cor do texto */
+}
+
+/* Espaços vazios (dias fora do mês) */
+.empty {
+  background-color: transparent; /* Fundo vazio */
+}
+
+/* Bolinhas de eventos */
+.event-day .event-dot {
+  width: 10px; /* Tamanho da bolinha */
+  height: 10px;
+  border-radius: 50%; /* Formato circular */
+  position: absolute; /* Posicionamento dentro do dia */
+  bottom: 10px; /* Alinhado ao fundo */
+  left: 50%; /* Alinhado ao centro */
+  transform: translateX(-50%); /* Corrige o posicionamento horizontal */
+}
+
+/* Responsividade para telas maiores */
+@media (min-width: 768px) {
+  .calendar-grid {
+    max-width: 700px; /* Expande o grid em telas maiores */
+  }
+
+  .day {
+    height: 100px; /* Aumenta a altura das células */
+    font-size: 20px; /* Tamanho maior da fonte */
+  }
+}

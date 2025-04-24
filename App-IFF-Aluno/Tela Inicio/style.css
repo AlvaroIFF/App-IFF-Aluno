@@ -1,0 +1,58 @@
+/* Estilos Gerais */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #6A1B9A;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar li a i {
+  margin-right: 10px;
+}
+
+.sidebar li a:hover {
+  background-color: #4A148C;
+}
+
+.main-content {
+  margin-left: 250px; /* Espaço para o menu lateral */
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.header {
+  background-color: #f4f4f9;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
