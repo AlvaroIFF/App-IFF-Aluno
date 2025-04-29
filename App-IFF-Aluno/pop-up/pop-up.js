@@ -18,14 +18,20 @@ class Popup {
     });
   }
 
-  // Método para abrir o pop-up
-  open(content = '') {
-    if (content) {
-      this.popup.querySelector('.popup-content').innerHTML = `
-        <span class="close">&times;</span>
-        ${content}
-      `;
-    }
+  // Método para abrir o pop-up com informações dos dias selecionados
+  open(selectedDays = []) {
+    // Verifica se foram passados dias selecionados
+    const content = selectedDays.length > 0 
+      ? `<ul>${selectedDays.map(day => `<li>${day}</li>`).join('')}</ul>`
+      : 'Nenhum dia selecionado.';
+    
+    // Atualiza o conteúdo do pop-up
+    this.popup.querySelector('.popup-content').innerHTML = `
+      <span class="close">&times;</span>
+      <h3>Dias Selecionados</h3>
+      ${content}
+    `;
+    
     this.popup.classList.add('show');
   }
 
