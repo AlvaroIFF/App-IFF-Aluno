@@ -1,6 +1,0 @@
-<div id="popup" class="popup hidden">
-  <div class="popup-content">
-    <span id="close-popup" class="close">&times;</span>
-    <p>Details for this day</p>
-  </div>
-</div>
