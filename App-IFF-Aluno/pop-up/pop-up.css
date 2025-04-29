@@ -1,0 +1,34 @@
+/* Pop-up container */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 300px;
+  max-width: 90%;
+  z-index: 1000;
+  padding: 20px;
+  display: none; /* Hidden by default */
+}
+
+/* Pop-up visible */
+.popup.show {
+  display: block;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Overlay */
+.hidden {
+  display: none;
+}
