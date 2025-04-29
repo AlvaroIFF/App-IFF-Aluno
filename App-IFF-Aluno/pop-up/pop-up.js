@@ -14,13 +14,17 @@ class Popup {
     });
   }
 
-  // Método para abrir o pop-up
-  open(content = '') {
-    if (content) {
-      this.popup.querySelector('.popup-content').innerHTML = `
-        ${content}
-      `;
-    }
+  // Método para abrir o pop-up com o dia selecionado
+  open(day, content = '') {
+    // Atualiza o conteúdo do pop-up com o dia no topo
+    const popupContent = `
+      <h3>Dia Selecionado: ${day}</h3>
+      <div class="popup-body">${content}</div>
+    `;
+
+    this.popup.querySelector('.popup-content').innerHTML = popupContent;
+
+    // Exibe o pop-up
     this.popup.classList.add('show');
   }
 
