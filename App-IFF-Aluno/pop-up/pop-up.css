@@ -27,7 +27,15 @@
   font-size: 20px;
   cursor: pointer;
 }
+  margin: 0;
+  padding: 10px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
 
+.popup-body {
+  padding: 20px;
+}
 /* Overlay */
 .hidden {
   display: none;
