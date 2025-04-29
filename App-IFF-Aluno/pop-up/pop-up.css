@@ -32,9 +32,24 @@
   padding: 10px;
   text-align: center; /* Centraliza o texto do cabeçalho */
   border-bottom: 1px solid #ddd;
-  font-weight: bold;
-  font-size: 1.2em;
-  color: #493159; /* Cor opcional para o texto do cabeçalho */
+}
+
+/* Texto superior do cabeçalho */
+.popup-header h3 {
+  margin: 0;
+  font-size: 24px; /* Tamanho da fonte */
+  font-family: 'Inter', sans-serif; /* Fonte Inter */
+  font-weight: bold; /* Negrito */
+  color: #493159; /* Cor opcional para o texto */
+}
+
+/* Texto inferior do cabeçalho */
+.popup-header p {
+  margin: 0;
+  font-size: 21px; /* Tamanho da fonte */
+  font-family: 'Inter', sans-serif; /* Fonte Inter */
+  font-weight: 600; /* Semi Bold */
+  color: #666; /* Cor cinza */
 }
 
 /* Estilo do corpo do pop-up */
