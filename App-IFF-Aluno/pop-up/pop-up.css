@@ -8,11 +8,11 @@
   max-height: 80%; /* Limita a altura total do pop-up */
   overflow: hidden; /* Evita transbordamento */
   background-color: white;
-  border: 1px solid #ccc;
+  border: 5px solid #493159; /* Contorno da tela na cor especificada */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   padding: 0; /* Remove padding extra */
-  border-radius: 8px;
+  border-radius: 16px; /* Bordas arredondadas */
 }
 
 /* Fundo escuro para o overlay */
@@ -30,19 +30,11 @@
 .popup-header {
   background-color: #f0f0f0;
   padding: 10px;
-  text-align: center;
+  text-align: center; /* Centraliza o texto do cabeçalho */
   border-bottom: 1px solid #ddd;
-}
-
-.popup-header h3 {
-  margin: 0;
+  font-weight: bold;
   font-size: 1.2em;
-}
-
-.popup-header p {
-  margin: 0;
-  font-size: 0.9em;
-  color: #666;
+  color: #493159; /* Cor opcional para o texto do cabeçalho */
 }
 
 /* Estilo do corpo do pop-up */
@@ -51,12 +43,3 @@
   max-height: 60vh; /* Limite para altura do corpo */
   overflow-y: auto; /* Habilita scroll vertical para eventos longos */
 }
-
-.popup-body ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.popup-body li {
-  margin: 5px 0;
-  font-weight: bold;
