@@ -14,12 +14,22 @@ class Popup {
     });
   }
 
-  // Método para abrir o pop-up com o dia selecionado
-  open(day, content = '') {
-    // Atualiza o conteúdo do pop-up com o dia no topo
+  // Método para abrir o pop-up com eventos do dia selecionado
+  open(day, events = []) {
+    // Geração do conteúdo dos eventos
+    const eventsContent = events.length > 0
+      ? `<ul>${events.map(event => `
+          <li style="color: ${event.color};">
+            ${event.name}
+          </li>`).join('')}</ul>`
+      : '<p>Sem eventos para este dia.</p>';
+
+    // Atualiza o conteúdo do pop-up com o dia e os eventos
     const popupContent = `
       <h3>Dia Selecionado: ${day}</h3>
-      <div class="popup-body">${content}</div>
+      <div class="popup-body">
+        ${eventsContent}
+      </div>
     `;
 
     this.popup.querySelector('.popup-content').innerHTML = popupContent;
