@@ -2,10 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agenda - Março</title>
-  <link rel="stylesheet" href="agenda.css">
-  <script src="agenda.js" defer></script> <!-- Arquivo JS -->
+  <title>Agenda - Março</title> <link rel="stylesheet" href="agenda.css">
 </head>
 <body>
   <div class="agenda-container">
@@ -14,16 +11,17 @@
       <h1>Agenda - Março 2025</h1>
     </header>
     
-<div class="day">
-    <span>7</span>
-    <div class="events-container">
-        <div class="event-dot" style="background-color: #FFA500;"></div>
-        <div class="event-dot" style="background-color: #007BFF;"></div>
-    </div>
-</div>
-    <!-- Calendário -->
-    <div class="calendar">
-      <div class="calendar-grid" id="calendar-grid"></div> <!-- Calendário gerado dinamicamente -->
-    </div>
+<div class="calendar">
+  <div class="weekdays-header">
+     <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div> <!-- índice dos dias da semana -->
   </div>
+    <div class="calendar-grid" id="calendar-grid"></div>
+</div>
+    <div id="event-details-section" data-selected-day="">
+        <p class="no-events-message">Selecione um dia para ver as atividades.</p>
+        </div>
+</div>
+
+  <script src="agenda.js"></script>
 </body>
+</html>
