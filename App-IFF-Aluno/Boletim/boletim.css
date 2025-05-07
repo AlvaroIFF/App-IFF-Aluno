@@ -158,3 +158,12 @@ body {
 .disciplina[data-media="baixa"] {
   border-left-color: #F44336; 
 }
+.disciplina p strong {
+  color: #333;
+}
+
+.disciplina p:last-of-type {
+  font-weight: bold;
+  color: #b30000;
+}
+
