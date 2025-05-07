@@ -36,3 +36,43 @@ function criarCardDisciplina(disciplina) {
 }
 
 disciplinas.forEach(criarCardDisciplina);
+
+const disciplinas = [
+  {
+    nome: "Matemática",
+    professor: "Prof. João",
+    nota: "8.5",
+    frequencia: "95%",
+  },
+  {
+    nome: "Português",
+    professor: "Profa. Maria",
+    nota: "9.0",
+    frequencia: "98%",
+  },
+  {
+    nome: "História",
+    professor: "Prof. Carlos",
+    nota: "7.8",
+    frequencia: "92%",
+  }
+];
+
+// Seleciona o container onde as disciplinas serão inseridas
+const container = document.querySelector(".disciplinas-container");
+
+// Para cada disciplina, cria e adiciona um bloco de HTML
+disciplinas.forEach(disciplina => {
+  const disciplinaDiv = document.createElement("div");
+  disciplinaDiv.classList.add("disciplina");
+
+  disciplinaDiv.innerHTML = `
+    <h3>${disciplina.nome}</h3>
+    <p><strong>Professor:</strong> ${disciplina.professor}</p>
+    <p><strong>Nota:</strong> ${disciplina.nota}</p>
+    <p><strong>Frequência:</strong> ${disciplina.frequencia}</p>
+    <hr>
+  `;
+
+  container.appendChild(disciplinaDiv);
+});
