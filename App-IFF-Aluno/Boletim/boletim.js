@@ -40,5 +40,13 @@ disciplinas.forEach(disciplina => {
     <hr>
   `;
 
+if (media >= 7) {
+  disciplinaDiv.setAttribute("data-media", "alta");
+} else if (media >= 5) {
+  disciplinaDiv.setAttribute("data-media", "media");
+} else {
+  disciplinaDiv.setAttribute("data-media", "baixa");
+}
+
   container.appendChild(disciplinaDiv);
 });
