@@ -1,0 +1,23 @@
+.periodo {
+  padding: 20px;
+  margin: 10px 0;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.concluido {
+  background-color: #ccc;
+  color: #666;
+}
+
+.em-curso {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.futuro {
+  background-color: transparent;
+  border-color: #2196F3;
+  color: #2196F3;
+}
