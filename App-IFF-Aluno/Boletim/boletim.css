@@ -136,7 +136,17 @@ body {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Adiciona cor pela média */
+.disciplina h3 {
+  margin-top: 0;
+  color: #003366;
+}
+
+.disciplina p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+
 .disciplina[data-media="alta"] {
   border-left-color: #4CAF50; 
 }
