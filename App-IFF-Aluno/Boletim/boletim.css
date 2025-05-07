@@ -118,10 +118,17 @@ body {
     margin: 0;
     margin-bottom: 8px;
 }
-.card-disciplina {
-  border: 1px solid #ccc;
-  padding: 10px;
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+#quadroNotas {
+  margin-top: 20px;
+}
+
+.disciplina {
   margin-bottom: 15px;
-  border-radius: 6px;
-  background-color: #f9f9f9;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
 }
