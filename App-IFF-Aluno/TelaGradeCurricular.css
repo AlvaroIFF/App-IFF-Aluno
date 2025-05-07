@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    background-color: #F8F5F9;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+:root {
+    --color-roxo-principal: #493159;
+    --color-cinza-claro-borda: #EBE5E9;
+    --color-cinza-claro-bg: #F8F5F9;
+    --color-verde-principal: #A7D46D;
+    --color-verde-bg: #F3F8E7;
+    --color-azul-principal: #60BEE7;
+    --color-azul-bg: #E7F5F8;
+    --color-laranja-principal: #EC9632;
+    --color-laranja-bg: #FDF4E7;
+    --color-rosa-principal: #EC93A2;
+    --color-rosa-bg: #FDDDEE;
+    --color-amarelo-principal: #EC9632;
+    --color-amarelo-bg: #FDF9E7;
+    --color-roxo-secundario: #493159;
+    --color-texto-geral: #333333;
+    --color-texto-code: #555555;
+}
+
+.container-main {
+    width: 100%;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 72rem;
+}
+@media (min-width: 768px) {
+    .container-main {
+        padding: 2rem;
+    }
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.main-header h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--color-roxo-principal);
+    margin-bottom: 0.5rem;
+}
+
+.sections-wrapper > section + section {
+    margin-top: 3rem;
+}
+
+.subject-card {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-width: 1px;
+    border-style: solid;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.subject-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subject-card.theme-cinza {
+    border-color: var(--color-cinza-claro-borda);
+    background-color: var(--color-cinza-claro-bg);
+    color: var(--color-texto-geral);
+}
+.subject-card.theme-cinza .card-subject-code {
+    color: var(--color-texto-code);
+}
+
+.subject-card.theme-rosa {
+    border-color: var(--color-rosa-principal);
+    background-color: var(--color-rosa-bg);
+    color: #FFFFFF;
+}
+.subject-card.theme-rosa .card-subject-code {
+    color: #FFFFFF;
+}
+
+.subject-card.theme-verde {
+    border-color: var(--color-verde-principal);
+    background-color: var(--color-verde-bg);
+    color: #597823;
+}
+.subject-card.theme-verde .card-subject-code {
+    color: #597823;
+}
+
+.subject-card.theme-amarelo {
+    border-color: var(--color-amarelo-principal);
+    background-color: var(--color-amarelo-bg);
+    color: #8A7C24;
+}
+.subject-card.theme-amarelo .card-subject-code {
+    color: #8A7C24;
+}
+
+.subject-card.theme-azul {
+    border-color: var(--color-azul-principal);
+    background-color: var(--color-azul-bg);
+    color: #24657A;
+}
+.subject-card.theme-azul .card-subject-code {
+    color: #24657A;
+}
+
+.subject-card.theme-laranja {
+    border-color: var(--color-laranja-principal);
+    background-color: var(--color-laranja-bg);
+    color: #8A6122;
+}
+.subject-card.theme-laranja .card-subject-code {
+    color: #8A6122;
+}
+
+.period-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.period-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+    color: var(--color-roxo-principal);
+    border-bottom: 2px solid var(--color-roxo-principal);
+    padding-bottom: 0.75rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.card-subject-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-subject-code {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 0.25rem;
+}
+
+.card-details {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.period-grid-semestre8 {
+    grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+    .period-grid-semestre8 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .subject-card-semestre8 {
+        grid-column: span 2 / span 2;
+        grid-column-start: 2;
+    }
+}
