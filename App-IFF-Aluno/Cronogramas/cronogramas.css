@@ -1,22 +1,51 @@
-.cronograma-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #3c2e4f;
 }
 
-#semestre {
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.titulo-principal {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #3c2e4f;
   text-align: center;
-  color: #003366;
-  font-size: 24px;
-  margin-bottom: 20px;
+  flex: 1;
 }
 
-.disciplina-item {
-  background-color: #f4f4f4;
-  margin-bottom: 10px;
-  padding: 15px;
-  border-left: 6px solid #2196F3;
+.semestre-atual {
+  background-color: #42275a;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.cronograma-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  background-color: white;
+  border: 2px solid #e0d6ec;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.disciplina {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.disciplina h3 {
+  margin: 0 0 0.5rem;
+  color: #3c2e4f;
 }
