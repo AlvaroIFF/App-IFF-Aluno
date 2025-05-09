@@ -1,0 +1,129 @@
+/* Estilos Gerais */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #6A1B9A;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar li a i {
+  margin-right: 10px;
+}
+
+.sidebar li a:hover {
+  background-color: #4A148C;
+}
+
+/* Conteúdo Principal */
+.main-content {
+  margin-left: 250px; /* Espaço para o menu lateral */
+  padding: 20px;
+  flex-grow: 1;
+  display: flex; /* Torna o layout flexível */
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: flex-start; /* Alinha ao topo */
+  box-sizing: border-box;
+  min-height: 100vh; /* Garante que ocupa a altura total */
+  background-color: #f4f4f9; /* Fundo claro para destacar as janelas */
+}
+
+/* Cabeçalho */
+.header {
+  background-color: #f4f4f9;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Container das Janelas de Informação */
+.info-windows {
+  display: flex;
+  justify-content: space-between; /* Espaçamento uniforme entre as janelas */
+  align-items: flex-start;
+  gap: 20px; /* Espaço entre as janelas */
+  margin-top: 20px;
+  flex-wrap: wrap; /* Permite que as janelas se ajustem em várias linhas */
+  width: 100%; /* Ocupa toda a largura do container principal */
+}
+
+/* Estilo para cada janela */
+.info-box {
+  background-color: #f4f4f9; /* Fundo claro */
+  border: 1px solid #ddd; /* Borda sutil */
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 20px;
+  width: calc(30% - 20px); /* Largura proporcional com ajuste do gap */
+  max-width: 300px; /* Limita o tamanho máximo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+  text-align: center;
+  flex: 1; /* Garante que as janelas se ajustem proporcionalmente */
+}
+
+/* Títulos das janelas */
+.info-box h3 {
+  color: #6A1B9A; /* Roxo */
+  margin-bottom: 10px;
+}
+
+/* Texto descritivo */
+.info-box p {
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Botões */
+.info-box button {
+  background-color: #6A1B9A; /* Roxo */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.info-box button:hover {
+  background-color: #4A148C; /* Roxo mais escuro ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .info-box {
+    width: 100%; /* Janelas ocupam toda a largura em telas menores */
+  }
+}
